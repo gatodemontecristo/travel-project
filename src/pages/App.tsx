@@ -1,4 +1,4 @@
-import { Banner } from '../components'
+import { Banner, Title } from '../components'
 import '../styles/App.css'
 
 function App() {
@@ -6,7 +6,9 @@ function App() {
   return (
     <>
     <Banner buttonText="Explore More" titleText="Find more locations like this"></Banner>
-     <h2>Hola Mundo</h2>
+     <section className="w-full h-screen mt-10">
+      <Title title="Our Recommendations"></Title>
+     </section>
      </>
   )
 }
