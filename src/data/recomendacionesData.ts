@@ -18,4 +18,52 @@ export const recomendacionesData:recomendacionesProps[] = [{
     imagen:"bg-limaplaza",
     titulo:"Centro histórico de Lima",
     subtitulo:"El linaje de una capital con tradición",
+},{
+    imagen:"bg-limaplaza",
+    titulo:"Centro histórico de Lima",
+    subtitulo:"El linaje de una capital con tradición",
+},{
+    imagen:"bg-limaplaza",
+    titulo:"Centro histórico de Lima",
+    subtitulo:"El linaje de una capital con tradición",
+},{
+    imagen:"bg-limaplaza",
+    titulo:"Centro histórico de Lima",
+    subtitulo:"El linaje de una capital con tradición",
+},{
+    imagen:"bg-limaplaza",
+    titulo:"Centro histórico de Lima",
+    subtitulo:"El linaje de una capital con tradición",
+},{
+    imagen:"bg-limaplaza",
+    titulo:"Centro histórico de Lima",
+    subtitulo:"El linaje de una capital con tradición",
+},{
+    imagen:"bg-limaplaza",
+    titulo:"Centro histórico de Lima",
+    subtitulo:"El linaje de una capital con tradición",
+},{
+    imagen:"bg-limaplaza",
+    titulo:"Centro histórico de Lima",
+    subtitulo:"El linaje de una capital con tradición",
+},{
+    imagen:"bg-limaplaza",
+    titulo:"Centro histórico de Lima",
+    subtitulo:"El linaje de una capital con tradición",
+},{
+    imagen:"bg-limaplaza",
+    titulo:"Centro histórico de Lima",
+    subtitulo:"El linaje de una capital con tradición",
+},{
+    imagen:"bg-limaplaza",
+    titulo:"Centro histórico de Lima",
+    subtitulo:"El linaje de una capital con tradición",
+},{
+    imagen:"bg-limaplaza",
+    titulo:"Centro histórico de Lima",
+    subtitulo:"El linaje de una capital con tradición",
+},{
+    imagen:"bg-limaplaza",
+    titulo:"Centro histórico de Lima",
+    subtitulo:"El linaje de una capital con tradición",
 }]
