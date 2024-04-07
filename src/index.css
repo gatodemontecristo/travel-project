@@ -13,7 +13,7 @@
   }
   /* Chrome, Edge, and Safari */
   *::-webkit-scrollbar {
-    width: 15px;
+    width: 10px;
   }
   
   *::-webkit-scrollbar-track {
@@ -22,9 +22,13 @@
   }
   *::-webkit-scrollbar-thumb {
     background-color: #F68E1E;
-    border-radius: 14px;
+    border-radius: 10px;
     border: 2px solid #F68E1E;
-  }
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
 
   @tailwind components;
 @tailwind utilities;
