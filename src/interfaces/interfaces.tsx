@@ -3,3 +3,4 @@ export interface recomendacionesProps{
     titulo:string,
     subtitulo:string,
 }
+export interface destacadasProps extends recomendacionesProps{}
