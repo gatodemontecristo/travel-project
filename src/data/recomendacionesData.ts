@@ -43,7 +43,7 @@ export const recomendacionesData:recomendacionesProps[] = [{
     titulo:"Moquegua",
     subtitulo:"Entre el mar y la campiña",
 },{
-    imagen:"bg-moquegua",
+    imagen:"bg-sitiocuzco",
     titulo:"Sitios arqueológicos en Cusco",
     subtitulo:"Caminar sobre la historia",
 }]
