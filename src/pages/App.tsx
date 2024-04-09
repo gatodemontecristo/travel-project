@@ -37,6 +37,15 @@ function App() {
           ))}
         </FAQForm>
       </section>
+      <footer className="w-full h-auto bg-secondary p-6 mt-8  space-y-2 " >
+				<p className="text-lg text-white">Acerca de</p>
+				<p className="text-sm text-white">Política de Privacidad</p>
+				<p className="text-sm text-white">versionistas</p>
+				<p className="text-sm text-white">Terminos y Condiciones</p>
+				<p className="text-sm text-white">Empleos</p>
+				<p className="text-sm text-white">Platzi Travel,Inc</p>
+				<p className="text-sm text-white">Síguenos</p>
+			</footer>
     </>
   );
 }
