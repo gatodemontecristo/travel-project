@@ -1,4 +1,4 @@
-import { Banner, Card, Title } from "../components";
+import { Banner, Card, Grid, Title } from "../components";
 import { recomendacionesData } from "../data";
 import { v4 as uuidv4 } from "uuid";
 
@@ -28,38 +28,7 @@ function App() {
       </section>
       <section className="w-full  mt-10 pl-6 pr-6 ">
         <Title title="Trending Stays"></Title>
-        <div className="flex flex-col gap-8">
-          <div className="flex flex-row items-center justify-center">
-            <div className="w-full h-96 bg-cordillera bg-cover bg-top rounded-2xl p-8">
-              <p className="text-3xl leading-9 font-semibold">Chicago</p>
-              <p className="text-md mt-2">2 rooms, bathroom and kitchen</p>
-            </div>
-          </div>
-
-
-          <div className="flex flex-row w-full gap-8">
-            <div className="flex flex-col w-2/3">
-              <div className="w-full h-full bg-carnaval bg-cover bg-center rounded-2xl p-8">
-              <p className="text-3xl leading-9 font-semibold">Chicago</p>
-              <p className="text-md mt-2">2 rooms, bathroom and kitchen</p>
-              </div>
-            </div>
-            <div className="flex flex-col w-1/3 gap-8">
-              <div className="flex flex-row">
-                <div className="w-full h-96 bg-lalibertad bg-cover bg-center rounded-2xl p-8">
-                <p className="text-3xl leading-9 font-semibold">Chicago</p>
-              <p className="text-md mt-2">2 rooms, bathroom and kitchen</p>
-                </div>
-              </div>
-              <div className="flex flex-row">
-                <div className="w-full h-96 bg-parquemanu bg-cover bg-center rounded-2xl p-8">
-                <p className="text-3xl leading-9 font-semibold">Chicago</p>
-              <p className="text-md mt-2">2 rooms, bathroom and kitchen</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        <Grid></Grid>
       </section>
     </>
   );

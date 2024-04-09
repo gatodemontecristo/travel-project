@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+// eslint-disable-next-line @typescript-eslint/no-var-requires, no-undef
 const colors = require('tailwindcss/colors')
 export default {
   content: [
@@ -25,7 +26,6 @@ export default {
         ancash: "url('../assets/ancash.jpg')",
         cuzco: "url('../assets/cuzco.jpg')",
         sanmartincanoa: "url('../assets/sanmartincanoa.jpg')",
-        cuzco: "url('../assets/cuzco.jpg')",
         loreto: "url('../assets/loreto.jpg')",
         madrededios: "url('../assets/madrededios.jpg')",
         moquegua: "url('../assets/moquegua.jpg')",
