@@ -42,20 +42,20 @@ export const Grid = () => {
         </div>
         <div className="flex flex-col w-1/3 gap-8">
           <div className="flex flex-row">
-          <CardTrend
-            titulo={destacadasColeccion[2].titulo}
-            subtitulo={destacadasColeccion[2].subtitulo}
-            imagen={destacadasColeccion[2].imagen}
-            styles="h-96 text-black"
-          ></CardTrend>
+            <CardTrend
+              titulo={destacadasColeccion[2].titulo}
+              subtitulo={destacadasColeccion[2].subtitulo}
+              imagen={destacadasColeccion[2].imagen}
+              styles="h-96 text-white"
+            ></CardTrend>
           </div>
           <div className="flex flex-row">
-          <CardTrend
-            titulo={destacadasColeccion[3].titulo}
-            subtitulo={destacadasColeccion[3].subtitulo}
-            imagen={destacadasColeccion[3].imagen}
-            styles="h-96 text-black"
-          ></CardTrend>
+            <CardTrend
+              titulo={destacadasColeccion[3].titulo}
+              subtitulo={destacadasColeccion[3].subtitulo}
+              imagen={destacadasColeccion[3].imagen}
+              styles="h-96 text-black"
+            ></CardTrend>
           </div>
         </div>
       </div>

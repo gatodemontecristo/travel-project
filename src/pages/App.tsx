@@ -20,11 +20,11 @@ function App() {
       ></Banner>
       <Section>
         <Title title="Our Recommendations"></Title>
-        <div className="flex flex-row gap-4  pb-6 overflow-x-auto">
+        <div className="flex flex-row gap-4  pb-6 pt-4 overflow-x-auto">
           {recomendacionesData.map((data, index) => (
             <Card
               key={uuidv4()}
-              tipo={index % 2 == 0 ? "claro" : "oscuro"}
+              tipo={index % 2 != 0 ? "claro" : "oscuro"}
               imagen={data.imagen}
               subtitulo={data.subtitulo}
               titulo={data.titulo}
@@ -44,8 +44,8 @@ function App() {
           ))}
         </FAQForm>
       </Section>
-      <footer className="w-full h-auto bg-secondary px-6 py-20 mt-8  space-y-2 ">
-        <p className="text-lg text-white">Acerca de</p>
+      <footer className="w-full h-auto bg-secondary px-6 py-20 mt-24  space-y-2 ">
+        <p className="text-3xl text-white font-bold mb-5">Acerca de</p>
         <p className="text-sm text-white">Política de Privacidad</p>
         <p className="text-sm text-white">versionistas</p>
         <p className="text-sm text-white">Terminos y Condiciones</p>
