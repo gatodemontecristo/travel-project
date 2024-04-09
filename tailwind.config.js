@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+// eslint-disable-next-line @typescript-eslint/no-var-requires, no-undef
 const colors = require('tailwindcss/colors')
 export default {
   content: [
@@ -25,15 +26,14 @@ export default {
         ancash: "url('../assets/ancash.jpg')",
         cuzco: "url('../assets/cuzco.jpg')",
         sanmartincanoa: "url('../assets/sanmartincanoa.jpg')",
-        cuzco: "url('../assets/cuzco.jpg')",
         loreto: "url('../assets/loreto.jpg')",
         madrededios: "url('../assets/madrededios.jpg')",
         moquegua: "url('../assets/moquegua.jpg')",
         sitiocuzco: "url('../assets/sitiocuzco.jpg')",
-        carnaval: "url('../assets/carnaval.jpg')",
-        cordillera: "url('../assets/cordillera.jpg')",
-        lalibertad: "url('../assets/lalibertad.jpg')",
-        parquemanu: "url('../assets/parquemanu.jpg')",
+        carnaval: "url('../assets/destacados/carnaval.jpg')",
+        cordillera: "url('../assets/destacados/cordillera.jpg')",
+        lalibertad: "url('../assets/destacados/lalibertad.jpg')",
+        parquemanu: "url('../assets/destacados/parquemanu.jpg')",
       },
       backgroundColor: (theme) => ({
         ...theme("colors"),

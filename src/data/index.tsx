@@ -1,1 +1,2 @@
-export * from './recomendacionesData'
+export * from './recomendacionesData';
+export * from './destacadasData';

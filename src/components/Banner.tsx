@@ -1,10 +1,11 @@
 
 export interface BannerProps{
     buttonText:string,
-    titleText:string
+    titleText:string,
+    imgPath:string
 }
 
-export const Banner = ({buttonText,titleText}:BannerProps) => {
+export const Banner = ({buttonText,titleText,imgPath}:BannerProps) => {
   return (
     <div className="w-full h-full bg-cover bg-center">
       <div className="w-1/5 absolute mt-32 ml-10 flex flex-col gap-5">
@@ -14,7 +15,7 @@ export const Banner = ({buttonText,titleText}:BannerProps) => {
           {buttonText}
         </button>
       </div>
-      <img src="./assets/machupichu.jpg" alt="" />
+      <img src={`./assets/${imgPath}`} alt="" />
      
     </div>
   );
