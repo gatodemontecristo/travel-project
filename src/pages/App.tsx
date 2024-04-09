@@ -1,5 +1,5 @@
-import { Banner, Card, Grid, Title } from "../components";
-import { recomendacionesData } from "../data";
+import { Banner, Card, FAQForm, Grid, Paragraph, Title } from "../components";
+import { FAQData, recomendacionesData } from "../data";
 import { v4 as uuidv4 } from "uuid";
 
 function App() {
@@ -29,6 +29,13 @@ function App() {
       <section className="w-full  mt-10 pl-6 pr-6 ">
         <Title title="Trending Stays"></Title>
         <Grid></Grid>
+      </section>
+      <section className="w-full  mt-10 pl-6 pr-6 ">
+        <FAQForm title="FAQ">
+          {FAQData.map((itemText) => (
+            <Paragraph type={itemText.type} text={itemText.text}></Paragraph>
+          ))}
+        </FAQForm>
       </section>
     </>
   );
