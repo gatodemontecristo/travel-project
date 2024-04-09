@@ -14,7 +14,7 @@ export default {
       tertiary: "#CC2D4A",
     },
     fontFamily: {
-      Roboto: ["Roboto", "sans-serif"],
+      Monserrat: ["Monserrat", "sans-serif"],
     },
     extend: {
       backgroundImage: {
