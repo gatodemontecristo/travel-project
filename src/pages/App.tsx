@@ -7,7 +7,7 @@ import {
   Section,
   Title,
 } from "../components";
-import { FAQData, recomendacionesData } from "../data";
+import { FAQData, footerData, recomendacionesData } from "../data";
 import { v4 as uuidv4 } from "uuid";
 
 function App() {
@@ -44,14 +44,11 @@ function App() {
           ))}
         </FAQForm>
       </Section>
-      <footer className="w-full h-auto bg-secondary px-6 py-20 mt-24  space-y-2 ">
+      <footer className="w-full h-auto bg-secondary px-16 py-20 mt-24  space-y-2 ">
         <p className="text-3xl text-white font-bold mb-5">Acerca de</p>
-        <p className="text-sm text-white">Política de Privacidad</p>
-        <p className="text-sm text-white">versionistas</p>
-        <p className="text-sm text-white">Terminos y Condiciones</p>
-        <p className="text-sm text-white">Empleos</p>
-        <p className="text-sm text-white">Platzi Travel,Inc</p>
-        <p className="text-sm text-white">Síguenos</p>
+        {footerData.map((itemText) => (
+            <Paragraph type={itemText.type} text={itemText.text}></Paragraph>
+          ))}
       </footer>
     </>
   );

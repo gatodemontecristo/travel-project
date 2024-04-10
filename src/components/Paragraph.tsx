@@ -1,6 +1,6 @@
 export interface ParagraphProps {
   text: string;
-  type: "title" | "detail";
+  type: "title" | "detail"| "footer";
 }
 
 export const Paragraph = ({ text, type }: ParagraphProps) => {
@@ -9,7 +9,10 @@ export const Paragraph = ({ text, type }: ParagraphProps) => {
       className={`${
         type == "title"
           ? "text-2xl font-medium text-principal text-secondary opacity-80"
-          : "text-md"
+          : (type == "detail"
+              ? "text-md"
+              : "text-sm text-white"
+          ) 
       }`}
     >
       {text}
