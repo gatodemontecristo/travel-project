@@ -6,3 +6,5 @@ export * from './Paragraph'
 export * from './FAQForm'
 export * from './Section'
 export * from './NavItem'
+export * from './ButtonHead'
+

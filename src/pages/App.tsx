@@ -1,6 +1,7 @@
-import { useEffect } from "react";
+import { Fragment, useEffect } from "react";
 import {
   Banner,
+  ButtonHead,
   Card,
   FAQForm,
   Grid,
@@ -36,8 +37,15 @@ function App() {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+  const htmlElement = document.querySelector("html")
+  const onClickDark = () =>{
+    htmlElement?.classList.contains("dark") ? 
+    htmlElement?.classList.remove("dark") : 
+    htmlElement?.classList.add("dark")
+  }
+
   return (
-    <>
+    <div className="dark:bg-moonPrimary transition-all duration-300">
       <header>
         <nav
           id="myCustomNav"
@@ -48,7 +56,7 @@ function App() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <h1 className="text-base lg:text-xl font-bold px-4 py-2 lg:rounded-full lg:transition-all lg:duration-300 lg:ease-in-out   lg:transform text-tertiary ">
+            <h1 className="text-base lg:text-xl font-bold px-4 py-2 lg:rounded-full lg:transition-all lg:duration-300 lg:ease-in-out lg:transform text-tertiary dark:text-primary">
               Perú Travel
             </h1>
           </a>
@@ -60,29 +68,15 @@ function App() {
           </div>
 
           <div className="flex flex-row justify-center items-center lg:gap-2">
-            <button
-              id="moon-btn-desktop"
-              className="p-2 rounded-full border-solid border-2 border-transparent transform transition-all duration-300 ease-in-out lg:hover:border-primary dark:lg:hover:border-white"
-              href="#"
-            >
-              <MagnifyingGlassIcon className="h-6 w-6 fill-current text-primary" />
-            </button>
-
-            <button
-              id="moon-btn-desktop"
-              className="p-2 rounded-full border-solid border-2 border-transparent transform transition-all duration-300 ease-in-out lg:hover:border-primary dark:lg:hover:border-white"
-              href="#"
-            >
-              <MoonIcon className="h-6 w-6 fill-current text-primary" />
-            </button>
-
-            <button
-              id="moon-btn-desktop"
-              className="p-2 rounded-full border-solid border-2 border-transparent transform transition-all duration-300 ease-in-out lg:hover:border-primary dark:lg:hover:border-white"
-              href="#"
-            >
-              <UserIcon className="h-6 w-6 fill-current text-gray-500" />
-            </button>
+            <ButtonHead color="text-primary dark:text-white">
+              <MagnifyingGlassIcon className="h-6 w-6 fill-curren" />
+            </ButtonHead>
+            <ButtonHead color="text-primary" clickEvent={onClickDark}>
+              <MoonIcon className="h-6 w-6 fill-curren" />
+            </ButtonHead>
+            <ButtonHead color="text-gray-500 dark:text-white">
+              <UserIcon className="h-6 w-6 fill-curren" />
+            </ButtonHead>
           </div>
         </nav>
       </header>
@@ -124,7 +118,7 @@ function App() {
           <Paragraph type={itemText.type} text={itemText.text}></Paragraph>
         ))}
       </footer>
-    </>
+    </div>
   );
 }
 
