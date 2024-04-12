@@ -1,4 +1,4 @@
-import { Fragment, useEffect } from "react";
+import {  useEffect } from "react";
 import {
   Banner,
   ButtonHead,
@@ -85,6 +85,7 @@ function App() {
         buttonText="Explore More"
         titleText="Find more locations like this"
         imgPath="machupichu.jpg"
+        onClickBtn={onClickDark}
       ></Banner>
       <Section>
         <Title title="Our Recommendations"></Title>
