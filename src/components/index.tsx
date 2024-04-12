@@ -7,4 +7,6 @@ export * from './FAQForm'
 export * from './Section'
 export * from './NavItem'
 export * from './ButtonHead'
+export * from './FooterFinal'
+export * from './MenuResponsive'
 
