@@ -2,7 +2,7 @@
 
 
 .Card{
-  @apply w-48 h-64 flex-none shadow-md rounded-lg transform transition-all duration-300 hover:-translate-y-4 hover:shadow-xl  
+  @apply lg:w-48 w-1/2 h-64 flex-none shadow-md rounded-lg transform transition-all duration-300 hover:-translate-y-4 hover:shadow-xl  
   }
 
   .Card-Title-Color{

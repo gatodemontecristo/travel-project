@@ -5,5 +5,5 @@ interface SectionProps {
 }
 
 export const Section = ({ children }: SectionProps) => {
-  return <section className="w-full  my-10 px-16 ">{children}</section>;
+  return <section className="w-full  lg:my-10 my-5 lg:px-16 px-6 transition-all duration-300">{children}</section>;
 };

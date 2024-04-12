@@ -9,7 +9,7 @@ interface FAQFormProps {
 export const FAQForm = ({ children, title }: FAQFormProps) => {
   return (
     <>
-      <Title title={title} size="text-5xl"></Title>
+      <Title title={title} size="lg:text-5xl text-4xl"></Title>
       <div className="flex flex-col space-y-3">{children}</div>
     </>
   );
