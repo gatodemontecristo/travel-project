@@ -4,7 +4,7 @@ export interface TitleProps{
 }
 export const Title = ({title,size="text-3xl"}:TitleProps) => {
   return (
-    <h1 className={` pt-4 ${size} text-primary font-bold mb-5`}>
+    <h1 className={` pt-4 ${size} text-primary font-bold mb-5 dark:text-white transition-all duration-300`}>
       {title}
     </h1>
   );

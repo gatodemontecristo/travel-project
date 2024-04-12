@@ -2,14 +2,14 @@
 
 
 .Card{
-  @apply w-48 h-64 flex-none shadow-md rounded-lg transform transition-all hover:-translate-y-4 hover:shadow-xl 
+  @apply w-48 h-64 flex-none shadow-md rounded-lg transform transition-all duration-300 hover:-translate-y-4 hover:shadow-xl  
   }
 
   .Card-Title-Color{
-    @apply bg-secondary text-white
+    @apply bg-secondary text-white dark:bg-moonCard1 dark:text-gray-300
   }
   .Card-Title-White{
-    @apply bg-white text-tertiary
+    @apply bg-white text-tertiary dark:bg-moonCard2 dark:text-gray-300
   }
   /* Chrome, Edge, and Safari */
   *::-webkit-scrollbar {
