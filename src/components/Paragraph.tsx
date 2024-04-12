@@ -8,10 +8,10 @@ export const Paragraph = ({ text, type }: ParagraphProps) => {
     <p
       className={`${
         type == "title"
-          ? "text-2xl font-medium text-principal text-secondary opacity-80"
+          ? "text-2xl font-medium text-principal text-secondary opacity-80 dark:text-primary transition-all duration-300"
           : (type == "detail"
-              ? "text-md"
-              : "text-sm text-white"
+              ? "text-md dark:text-white transition-all duration-300"
+              : "text-sm text-white dark:text-gray-200"
           ) 
       }`}
     >
