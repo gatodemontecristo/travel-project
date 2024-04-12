@@ -112,7 +112,7 @@ function App() {
           ))}
         </FAQForm>
       </Section>
-      <footer className="w-full h-auto bg-secondary px-16 py-20 mt-24  space-y-2 ">
+      <footer className="w-full h-auto bg-secondary dark:bg-moonCard1 px-16 py-20 mt-24  space-y-2 ">
         <p className="text-3xl text-white font-bold mb-5">Acerca de</p>
         {footerData.map((itemText) => (
           <Paragraph type={itemText.type} text={itemText.text}></Paragraph>
