@@ -1,10 +1,12 @@
-import { Fragment, useEffect } from "react";
+import { useEffect } from "react";
 import {
   Banner,
   ButtonHead,
   Card,
   FAQForm,
+  FooterFinal,
   Grid,
+  MenuResponsive,
   NavItem,
   Paragraph,
   Section,
@@ -17,6 +19,11 @@ import {
   MoonIcon,
   UserIcon,
 } from "@heroicons/react/24/solid";
+import {
+  HeartIcon,
+  HomeModernIcon,
+  UserCircleIcon,
+} from "@heroicons/react/16/solid";
 
 function App() {
   useEffect(() => {
@@ -37,12 +44,12 @@ function App() {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-  const htmlElement = document.querySelector("html")
-  const onClickDark = () =>{
-    htmlElement?.classList.contains("dark") ? 
-    htmlElement?.classList.remove("dark") : 
-    htmlElement?.classList.add("dark")
-  }
+  const htmlElement = document.querySelector("html");
+  const onClickDark = () => {
+    htmlElement?.classList.contains("dark")
+      ? htmlElement?.classList.remove("dark")
+      : htmlElement?.classList.add("dark");
+  };
 
   return (
     <div className="dark:bg-moonPrimary transition-all duration-300">
@@ -85,6 +92,7 @@ function App() {
         buttonText="Explore More"
         titleText="Find more locations like this"
         imgPath="machupichu.jpg"
+        onClickBtn={onClickDark}
       ></Banner>
       <Section>
         <Title title="Our Recommendations"></Title>
@@ -112,12 +120,23 @@ function App() {
           ))}
         </FAQForm>
       </Section>
-      <footer className="w-full h-auto bg-secondary dark:bg-moonCard1 px-16 py-20 mt-24  space-y-2 ">
-        <p className="text-3xl text-white font-bold mb-5">Acerca de</p>
-        {footerData.map((itemText) => (
-          <Paragraph type={itemText.type} text={itemText.text}></Paragraph>
-        ))}
-      </footer>
+      <FooterFinal title="Acerca de" footerData={footerData}></FooterFinal>
+      <MenuResponsive>
+        <ButtonHead color="text-primary dark:text-white">
+          <HomeModernIcon className="h-7 w-7 fill-curren" />
+        </ButtonHead>
+        <ButtonHead color="text-primary dark:text-white">
+          <MagnifyingGlassIcon className="h-7 w-7 fill-curren" />
+        </ButtonHead>
+
+        <ButtonHead color="text-primary dark:text-white">
+          <HeartIcon className="h-7 w-7 fill-curren" />
+        </ButtonHead>
+
+        <ButtonHead color="text-primary dark:text-white">
+          <UserCircleIcon className="h-7 w-7 fill-curren" />
+        </ButtonHead>
+      </MenuResponsive>
     </div>
   );
 }
