@@ -11,7 +11,9 @@ export const CardTrend = ({
     <div
       className={`w-full bg-cover bg-top rounded-2xl p-8 ${imagen} ${styles}`}
     >
-      <p className="lg:text-3xl text-2xl lg:leading-9 leading-5 font-semibold">{titulo}</p>
+      <p className="lg:text-3xl text-2xl lg:leading-9 leading-5 font-semibold">
+        {titulo}
+      </p>
       <p className=" lg:mt-2 mt-1 lg:text-xl text-lg">{subtitulo}</p>
     </div>
   );
