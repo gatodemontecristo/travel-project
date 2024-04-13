@@ -9,10 +9,10 @@ import {
   MenuResponsive,
   NavItem,
   Paragraph,
+  ParagraphProps,
   Section,
   Title,
 } from "../components";
-import { FAQData, footerData } from "../data";
 import { v4 as uuidv4 } from "uuid";
 import {
   LanguageIcon,
@@ -64,6 +64,8 @@ function App() {
   const navData:navDataProps = t("navData", { returnObjects: true });
   const bannerData:bannerDataProps = t("bannerData", { returnObjects: true });
   const recomendacionesData:recomendacionesProps[] = t("recomendacionesData", { returnObjects: true });
+  const FAQData:ParagraphProps[] = t("FAQData", { returnObjects: true });
+  const footerData:ParagraphProps[] = t("footerData", { returnObjects: true });
   return (
     <div className="dark:bg-moonPrimary transition-all duration-300">
       <header>

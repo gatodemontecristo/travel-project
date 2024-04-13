@@ -5,11 +5,15 @@ import {
   destacadasData as destacadasDataEN,
   navData as navDataEN,
   recomendacionesData as recomendacionesDataEN,
+  FAQData as FAQDataEN,
+  footerData as footerDataEN,
 } from "../data/en";
 import {
   destacadasData as destacadasDataES,
   navData as navDataES,
   recomendacionesData as recomendacionesDataES,
+  FAQData as FAQDataES,
+  footerData as footerDataES,
 } from "../data/es";
 
 const resources = {
@@ -27,6 +31,8 @@ const resources = {
         subtitle4: "About Us",
       },
       recomendacionesData: recomendacionesDataEN,
+      FAQData: FAQDataEN,
+      footerData: footerDataEN,
     },
   },
   es: {
@@ -43,6 +49,8 @@ const resources = {
         subtitle4: "Acerca de",
       },
       recomendacionesData: recomendacionesDataES,
+      FAQData: FAQDataES,
+      footerData: footerDataES,
     },
   },
 };
