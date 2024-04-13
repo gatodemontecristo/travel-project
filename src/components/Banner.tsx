@@ -5,10 +5,12 @@ export interface BannerProps {
   buttonText: string;
   titleText: string;
   imgPath: string;
+  searchText:string;
+  logoText:string;
   onClickBtn?: () => void
 }
 
-export const Banner = ({ buttonText, titleText, imgPath,onClickBtn }: BannerProps) => {
+export const Banner = ({ buttonText, titleText, imgPath,onClickBtn,searchText,logoText }: BannerProps) => {
   return (
     <div className="w-full lg:h-full lg:bg-none h-[32rem] bg-machupichuM bg-cover bg-left dark:bg-moonPrimary relative lg:p-0 p-5">
       <div className="w-1/5 absolute mt-32 mx-16 lg:flex flex-col gap-5 hidden">
@@ -26,7 +28,7 @@ export const Banner = ({ buttonText, titleText, imgPath,onClickBtn }: BannerProp
 
       <div className="flex flex-row justify-between lg:hidden  w-full">
         <div className="bg-white px-4 py-2 rounded-full font-medium text-tertiary dark:text-primary dark:bg-moonPrimary text-lg transition-all duration-300">
-          <p>Peru Travel</p>
+          <p>{logoText}</p>
         </div>
         <ButtonHead color="text-primary bg-white text-xl dark:bg-moonPrimary" clickEvent={onClickBtn}>
           <MoonIcon className="h-6 w-6 fill-curren" />
@@ -39,7 +41,7 @@ export const Banner = ({ buttonText, titleText, imgPath,onClickBtn }: BannerProp
           className="w-full h-12 pl-10 pr-4 text-center text-wrap rounded-full outline-none shadow-md transition-all duration-300 focus-within:shadow-none focus:ring-2 focus:ring-primary dark:text-white dark:focus:ring-white dark:bg-gray-900"
           id="input"
           name="input"
-          placeholder="Search"
+          placeholder={searchText}
           type="search"
         />
       </div>

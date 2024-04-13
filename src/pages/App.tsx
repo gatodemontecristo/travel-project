@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import {
   Banner,
   ButtonHead,
@@ -12,9 +12,10 @@ import {
   Section,
   Title,
 } from "../components";
-import { FAQData, footerData, idData, recomendacionesData } from "../data";
+import { FAQData, footerData, recomendacionesData } from "../data";
 import { v4 as uuidv4 } from "uuid";
 import {
+  LanguageIcon,
   MagnifyingGlassIcon,
   MoonIcon,
   UserIcon,
@@ -24,6 +25,8 @@ import {
   HomeModernIcon,
   UserCircleIcon,
 } from "@heroicons/react/16/solid";
+import { useTranslation } from "react-i18next";
+import { bannerDataProps, navDataProps } from "../interfaces";
 
 function App() {
   useEffect(() => {
@@ -51,6 +54,15 @@ function App() {
       : htmlElement?.classList.add("dark");
   };
 
+  const [language, setlanguage] = useState('es')
+  const {i18n} = useTranslation("global");
+  const {t} = useTranslation();
+  const handleChangeLanguage = ()=>{
+    i18n.changeLanguage(`${language=="es" ? "en" : "es"}`);
+    setlanguage(`${language=="es" ? "en" : "es"}`);
+  }
+  const navData:navDataProps = t("navData", { returnObjects: true });
+  const bannerData:bannerDataProps = t("bannerData", { returnObjects: true });
   return (
     <div className="dark:bg-moonPrimary transition-all duration-300">
       <header>
@@ -64,12 +76,12 @@ function App() {
             rel="noopener noreferrer"
           >
             <h1 className="text-base lg:text-xl font-bold px-4 py-2 lg:rounded-full lg:transition-all lg:duration-300 lg:ease-in-out lg:transform text-tertiary dark:text-primary">
-              Perú Travel
+              {navData.logo}
             </h1>
           </a>
 
           <div className="flex flex-row justify-center items-center lg:gap-4 text-base lg:text-lg font-bold">
-            {idData.map((data) => (
+            {navData.idData.map((data) => (
               <NavItem title={data.title} hrefId={data.hrefId}></NavItem>
             ))}
           </div>
@@ -81,6 +93,9 @@ function App() {
             <ButtonHead color="text-primary" clickEvent={onClickDark}>
               <MoonIcon className="h-6 w-6 fill-curren" />
             </ButtonHead>
+            <ButtonHead color="text-primary" clickEvent={handleChangeLanguage}>
+              <LanguageIcon className="h-6 w-6 fill-curren" />
+            </ButtonHead>
             <ButtonHead color="text-gray-500 dark:text-white">
               <UserIcon className="h-6 w-6 fill-curren" />
             </ButtonHead>
@@ -89,13 +104,15 @@ function App() {
       </header>
 
       <Banner
-        buttonText="Explore More"
-        titleText="Find more locations like this"
+        buttonText={bannerData.button}
+        titleText={bannerData.title}
         imgPath="machupichu.jpg"
+        searchText={bannerData.search}
         onClickBtn={onClickDark}
+        logoText={navData.logo}
       ></Banner>
       <Section>
-        <Title title="Our Recommendations"></Title>
+        <Title title={bannerData.subtitle1}></Title>
         <div className="flex flex-row gap-4  pb-6 pt-4 overflow-x-auto">
           {recomendacionesData.map((data, index) => (
             <Card
@@ -110,17 +127,17 @@ function App() {
       </Section>
 
       <Section>
-        <Title title="Trending Stays"></Title>
+        <Title title={bannerData.subtitle2}></Title>
         <Grid></Grid>
       </Section>
       <Section>
-        <FAQForm title="FAQ">
+        <FAQForm title={bannerData.subtitle3}>
           {FAQData.map((itemText) => (
             <Paragraph type={itemText.type} text={itemText.text}></Paragraph>
           ))}
         </FAQForm>
       </Section>
-      <FooterFinal title="Acerca de" footerData={footerData}></FooterFinal>
+      <FooterFinal title={bannerData.subtitle4} footerData={footerData}></FooterFinal>
       <MenuResponsive>
         <ButtonHead color="text-primary dark:text-white">
           <HomeModernIcon className="h-7 w-7 fill-curren" />

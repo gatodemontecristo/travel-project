@@ -20,13 +20,11 @@ export const CardTrend = ({
 };
 
 export const Grid = () => {
-  // const destacadasColeccion = { ...destacadasData };
-  // console.log(destacadasColeccion);
+
 
 
   const {t}= useTranslation();
   const destacadasColeccion:destacadasProps[] = t("destacadasData", { returnObjects: true });
-  // console.log(destacadasColeccion2);
 
   return (
     <div className="flex flex-col lg:gap-8 gap-4">
