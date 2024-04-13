@@ -7,7 +7,7 @@
 <h3 align="center">Proyecto Perú Travel vs1</h3>
 
   <p align="center">
-    Landing page sobre destinos turisticos del Perú basado en el curso de TailwindCSS de PLatzi (100% responsiva)
+    Landing page sobre destinos turisticos del Perú, basado en el curso de TailwindCSS de PLatzi (100% responsiva)
     <br />
     <a href="https://tailwindcss.com/"><strong>Documento de TailwindCSS»</strong></a>
     <br />
