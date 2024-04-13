@@ -12,7 +12,7 @@ import {
   Section,
   Title,
 } from "../components";
-import { FAQData, footerData, recomendacionesData } from "../data";
+import { FAQData, footerData } from "../data";
 import { v4 as uuidv4 } from "uuid";
 import {
   LanguageIcon,
@@ -26,7 +26,7 @@ import {
   UserCircleIcon,
 } from "@heroicons/react/16/solid";
 import { useTranslation } from "react-i18next";
-import { bannerDataProps, navDataProps } from "../interfaces";
+import { bannerDataProps, navDataProps, recomendacionesProps } from "../interfaces";
 
 function App() {
   useEffect(() => {
@@ -63,6 +63,7 @@ function App() {
   }
   const navData:navDataProps = t("navData", { returnObjects: true });
   const bannerData:bannerDataProps = t("bannerData", { returnObjects: true });
+  const recomendacionesData:recomendacionesProps[] = t("recomendacionesData", { returnObjects: true });
   return (
     <div className="dark:bg-moonPrimary transition-all duration-300">
       <header>
@@ -109,6 +110,7 @@ function App() {
         imgPath="machupichu.jpg"
         searchText={bannerData.search}
         onClickBtn={onClickDark}
+        onClickBtn2={handleChangeLanguage}
         logoText={navData.logo}
       ></Banner>
       <Section>

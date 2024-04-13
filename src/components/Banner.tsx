@@ -1,4 +1,4 @@
-import { MagnifyingGlassIcon, MoonIcon } from "@heroicons/react/16/solid";
+import { LanguageIcon, MagnifyingGlassIcon, MoonIcon } from "@heroicons/react/16/solid";
 import { ButtonHead } from "./ButtonHead";
 
 export interface BannerProps {
@@ -8,9 +8,10 @@ export interface BannerProps {
   searchText:string;
   logoText:string;
   onClickBtn?: () => void
+  onClickBtn2?: () => void
 }
 
-export const Banner = ({ buttonText, titleText, imgPath,onClickBtn,searchText,logoText }: BannerProps) => {
+export const Banner = ({ buttonText, titleText, imgPath,onClickBtn,onClickBtn2,searchText,logoText }: BannerProps) => {
   return (
     <div className="w-full lg:h-full lg:bg-none h-[32rem] bg-machupichuM bg-cover bg-left dark:bg-moonPrimary relative lg:p-0 p-5">
       <div className="w-1/5 absolute mt-32 mx-16 lg:flex flex-col gap-5 hidden">
@@ -30,11 +31,17 @@ export const Banner = ({ buttonText, titleText, imgPath,onClickBtn,searchText,lo
         <div className="bg-white px-4 py-2 rounded-full font-medium text-tertiary dark:text-primary dark:bg-moonPrimary text-lg transition-all duration-300">
           <p>{logoText}</p>
         </div>
+        <div className="flex flex-row gap-2">
         <ButtonHead color="text-primary bg-white text-xl dark:bg-moonPrimary" clickEvent={onClickBtn}>
           <MoonIcon className="h-6 w-6 fill-curren" />
         </ButtonHead>
+        <ButtonHead color="text-primary bg-white text-xl dark:bg-moonPrimary" clickEvent={onClickBtn2}>
+          <LanguageIcon className="h-6 w-6 fill-curren" />
+        </ButtonHead>
+        </div>
       </div>
 
+      
       <div className="self-center relative  w-full lg:hidden top-5 ">
         <MagnifyingGlassIcon className="absolute left-3 top-1/2 -translate-y-1/2 h-6 w-6 fill-current text-primary" />
         <input
