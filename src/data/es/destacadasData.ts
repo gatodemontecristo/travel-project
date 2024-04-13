@@ -1,4 +1,5 @@
-import { destacadasProps } from "../interfaces";
+import { destacadasProps } from "../../interfaces";
+
 
 
 export const destacadasData:destacadasProps[] = [{

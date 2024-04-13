@@ -1,4 +1,4 @@
-import { recomendacionesProps } from "../interfaces";
+import { recomendacionesProps } from '../../interfaces/interfaces';
 
 
 

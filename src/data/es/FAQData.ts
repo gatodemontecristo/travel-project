@@ -1,4 +1,4 @@
-import { ParagraphProps } from "../components";
+import { ParagraphProps } from "../../components";
 
 export const FAQData:ParagraphProps[] = [{
     text:"Política de Cancelación",
