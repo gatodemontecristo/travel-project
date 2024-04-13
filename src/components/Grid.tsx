@@ -1,5 +1,5 @@
-import { destacadasData } from "../data";
-import { CardTrendProps } from "../interfaces";
+import { useTranslation } from "react-i18next";
+import { CardTrendProps, destacadasProps } from "../interfaces";
 
 export const CardTrend = ({
   titulo,
@@ -20,8 +20,14 @@ export const CardTrend = ({
 };
 
 export const Grid = () => {
-  const destacadasColeccion = { ...destacadasData };
-  console.log(destacadasColeccion);
+  // const destacadasColeccion = { ...destacadasData };
+  // console.log(destacadasColeccion);
+
+
+  const {t}= useTranslation();
+  const destacadasColeccion:destacadasProps[] = t("destacadasData", { returnObjects: true });
+  // console.log(destacadasColeccion2);
+
   return (
     <div className="flex flex-col lg:gap-8 gap-4">
       <div className="flex flex-row items-center justify-center">
