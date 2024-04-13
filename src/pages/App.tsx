@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import {  MouseEvent, useEffect, useState } from "react";
 import {
   Banner,
   ButtonHead,
@@ -66,6 +66,15 @@ function App() {
   const recomendacionesData:recomendacionesProps[] = t("recomendacionesData", { returnObjects: true });
   const FAQData:ParagraphProps[] = t("FAQData", { returnObjects: true });
   const footerData:ParagraphProps[] = t("footerData", { returnObjects: true });
+
+  const eventIdNavigation = (target:string,event: React.MouseEvent<HTMLButtonElement>)=>{
+
+    window.location.href=target;
+    event.preventDefault();
+    event.stopPropagation(); 
+
+    }
+
   return (
     <div className="dark:bg-moonPrimary transition-all duration-300">
       <header>
@@ -74,9 +83,8 @@ function App() {
           className="hidden z-10 md:flex flex-row justify-between items-center w-full h-16 pl-2 lg:px-16 pr-4 border-solid border-b-2 border-gray-300 dark:border-gray-600 text-primary dark:text-white bg-white dark:bg-gray-900 transition-all duration-300"
         >
           <a
-            href="https://github.com/KidBourbon/travel-website"
+            href="https://github.com/gatodemontecristo/travel-project"
             target="_blank"
-            rel="noopener noreferrer"
           >
             <h1 className="text-base lg:text-xl font-bold px-4 py-2 lg:rounded-full lg:transition-all lg:duration-300 lg:ease-in-out lg:transform text-tertiary dark:text-primary">
               {navData.logo}
@@ -85,7 +93,7 @@ function App() {
 
           <div className="flex flex-row justify-center items-center lg:gap-4 text-base lg:text-lg font-bold">
             {navData.idData.map((data) => (
-              <NavItem title={data.title} hrefId={data.hrefId}></NavItem>
+              <NavItem  key={uuidv4()} title={data.title} hrefId={data.hrefId}></NavItem>
             ))}
           </div>
 
@@ -115,7 +123,7 @@ function App() {
         onClickBtn2={handleChangeLanguage}
         logoText={navData.logo}
       ></Banner>
-      <Section>
+      <Section idSection="recommendations">
         <Title title={bannerData.subtitle1}></Title>
         <div className="flex flex-row gap-4  pb-6 pt-4 overflow-x-auto">
           {recomendacionesData.map((data, index) => (
@@ -130,31 +138,31 @@ function App() {
         </div>
       </Section>
 
-      <Section>
+      <Section idSection="trendings">
         <Title title={bannerData.subtitle2}></Title>
         <Grid></Grid>
       </Section>
-      <Section>
+      <Section idSection="faqs">
         <FAQForm title={bannerData.subtitle3}>
           {FAQData.map((itemText) => (
-            <Paragraph type={itemText.type} text={itemText.text}></Paragraph>
+            <Paragraph  key={uuidv4()} type={itemText.type} text={itemText.text}></Paragraph>
           ))}
         </FAQForm>
       </Section>
-      <FooterFinal title={bannerData.subtitle4} footerData={footerData}></FooterFinal>
+      <FooterFinal idFooter="footer" title={bannerData.subtitle4} footerData={footerData}></FooterFinal>
       <MenuResponsive>
-        <ButtonHead color="text-primary dark:text-white">
+        <ButtonHead color="text-primary dark:text-white" clickEvent={(e: MouseEvent<HTMLButtonElement, globalThis.MouseEvent>) => eventIdNavigation("#",e)}>
           <HomeModernIcon className="h-7 w-7 fill-curren" />
         </ButtonHead>
-        <ButtonHead color="text-primary dark:text-white">
+        <ButtonHead color="text-primary dark:text-white" clickEvent={(e: MouseEvent<HTMLButtonElement, globalThis.MouseEvent>) => eventIdNavigation("#recommendations",e)}>
           <MagnifyingGlassIcon className="h-7 w-7 fill-curren" />
         </ButtonHead>
 
-        <ButtonHead color="text-primary dark:text-white">
+        <ButtonHead color="text-primary dark:text-white" clickEvent={(e: MouseEvent<HTMLButtonElement, globalThis.MouseEvent>) => eventIdNavigation("#trendings",e)}>
           <HeartIcon className="h-7 w-7 fill-curren" />
         </ButtonHead>
 
-        <ButtonHead color="text-primary dark:text-white">
+        <ButtonHead color="text-primary dark:text-white" clickEvent={(e: MouseEvent<HTMLButtonElement, globalThis.MouseEvent>) => eventIdNavigation("#footer",e)}>
           <UserCircleIcon className="h-7 w-7 fill-curren" />
         </ButtonHead>
       </MenuResponsive>

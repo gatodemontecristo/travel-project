@@ -1,9 +1,9 @@
-import { ReactNode } from "react";
+import { MouseEvent, ReactNode } from "react";
 
 export interface ButtonHead {
   color:string;
   children: ReactNode;
-  clickEvent?: () => void;
+  clickEvent?:   (e: MouseEvent<HTMLButtonElement, globalThis.MouseEvent>) => void | (() => void);
 }
 
 export const ButtonHead = ({ color, children,clickEvent }: ButtonHead) => {
